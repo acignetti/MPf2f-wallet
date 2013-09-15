@@ -1,0 +1,383 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "activeItem": 0,
+        "container|animation": "scroll",
+        "id": "panel2",
+        "designer|userClassName": "MyPanel4",
+        "designer|initialView": true,
+        "layout": "card"
+    },
+    "configAlternates": {
+        "activeItem": "number"
+    },
+    "designerId": "c09aea8b-01f6-44fb-9fc0-d00834a9f0b8",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "activeItem",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "panelLogin"
+            },
+            "designerId": "45b83cd1-631a-49f7-8852-11dad113473b",
+            "cn": [
+                {
+                    "type": "Ext.Img",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 86,
+                        "id": "img"
+                    },
+                    "designerId": "1290f98f-6d61-416e-ba49-9658c0c3ec9c"
+                },
+                {
+                    "type": "Ext.form.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 448,
+                        "padding": "50 15 15 15"
+                    },
+                    "designerId": "58ded188-3368-4689-a559-2a17ec011ca2",
+                    "cn": [
+                        {
+                            "type": "Ext.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "id": "textUsuario",
+                                "label": "Usuario"
+                            },
+                            "designerId": "130f9b73-b821-4b4f-a9bc-5e95ab15c654"
+                        },
+                        {
+                            "type": "Ext.field.Password",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "id": "textPass",
+                                "label": "Contraseña"
+                            },
+                            "designerId": "6ff087f9-3c94-4d7b-a8e1-8766305a7a13"
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "id": "btnEntrar",
+                                "itemId": "mybutton",
+                                "margin": "20 auto 0 auto",
+                                "padding": "",
+                                "ui": "action",
+                                "width": 200,
+                                "text": "Entrar"
+                            },
+                            "designerId": "cfe35ac7-35ff-4d99-a808-35b3e75e5b9f",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onMybuttonTap",
+                                        "implHandler": [
+                                            "var elemto = Ext.getCmp(\"panel2\");\r",
+                                            "elemto.setActiveItem(1);"
+                                        ],
+                                        "name": "tap"
+                                    },
+                                    "designerId": "95ef4bb6-753e-46f1-bee5-63b9d4fd5e5d"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "idPanelPrincipal",
+                "itemId": "panelPrincipal"
+            },
+            "designerId": "e1047829-5694-41b4-8887-3786505ac715",
+            "cn": [
+                {
+                    "type": "Ext.tab.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "centered": false,
+                        "height": "100%"
+                    },
+                    "designerId": "6831b099-b394-4dfa-834a-345809cf0a63",
+                    "cn": [
+                        {
+                            "type": "Ext.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "title": "Pagar",
+                                "centered": false,
+                                "height": "100%"
+                            },
+                            "designerId": "75ac03c6-c89c-4060-ba1d-bcf6a7b873c5",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.Panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "height": "100%",
+                                        "padding": "50 0 0 0"
+                                    },
+                                    "designerId": "02bbbfbf-cf92-4de4-84d3-d57dd73869f9",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Label",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "html": "Ingresar Código",
+                                                "margin": "0 auto 0 auto",
+                                                "padding": "",
+                                                "width": 136
+                                            },
+                                            "designerId": "e340f8ee-1f65-4d2a-b272-9020aab90a42"
+                                        },
+                                        {
+                                            "type": "Ext.field.Text",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "margin": "10 20 0 20",
+                                                "label": ""
+                                            },
+                                            "designerId": "4cc32598-eda9-48df-9d2c-3038e4c162c7"
+                                        },
+                                        {
+                                            "type": "Ext.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "margin": "5% auto 0 auto",
+                                                "ui": "action",
+                                                "width": "50%",
+                                                "text": "Pagar"
+                                            },
+                                            "designerId": "895dc1aa-4bfc-46db-803d-104f83d6e8df"
+                                        },
+                                        {
+                                            "type": "Ext.SegmentedButton",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "margin": "20 auto 0 auto",
+                                                "width": 236
+                                            },
+                                            "designerId": "87d5ad35-64ec-40c2-b1d7-82cb2eea4bad",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.Button",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "margin": "0 0 0 0",
+                                                        "padding": "",
+                                                        "width": 111,
+                                                        "text": "Leer NFC"
+                                                    },
+                                                    "designerId": "6b9c0b85-b968-4dd4-9ec1-042100e965ae"
+                                                },
+                                                {
+                                                    "type": "Ext.Button",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "border": "",
+                                                        "width": 111,
+                                                        "text": "Leer QR"
+                                                    },
+                                                    "designerId": "85ba2d03-e3df-49cd-8ec3-f4f950853366"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "title": "Ofertas",
+                                "height": "100%"
+                            },
+                            "designerId": "880047c1-9e65-4570-86f8-fbe0cd119aa9",
+                            "cn": [
+                                {
+                                    "type": "Ext.Panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "height": "100%"
+                                    },
+                                    "designerId": "a8dfd410-83a5-415d-a447-d710c3bfec22",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Label",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "html": "Ofertas cerca tuyo!"
+                                            },
+                                            "designerId": "8ceb08c8-6efa-4bc6-b32c-949904946b27"
+                                        },
+                                        {
+                                            "type": "Ext.dataview.List",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "height": "100%",
+                                                "itemId": "mylist2",
+                                                "store": "storeOfertas"
+                                            },
+                                            "designerId": "6c2ded77-e751-4ce9-860a-fd8da996c5a8",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.XTemplate",
+                                                    "reference": {
+                                                        "name": "itemTpl",
+                                                        "type": "object"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "implHandler": [
+                                                            "<div class=\"contact\">{firstName} <strong>{lastName}</strong></div>"
+                                                        ],
+                                                        "designer|displayName": "itemTpl"
+                                                    },
+                                                    "designerId": "5a1e48dd-359c-4faa-9285-1fc1a95f174e"
+                                                },
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onMylist2ItemTap",
+                                                        "implHandler": [
+                                                            "var evento = Ext.getCmp('panel2');\r",
+                                                            "evento.setActiveItem(2);"
+                                                        ],
+                                                        "name": "itemtap"
+                                                    },
+                                                    "designerId": "90b009ee-6ca3-4b63-84b6-dbbfc1480e89"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "panel6"
+            },
+            "designerId": "52c9fb52-ec2f-40bb-a9eb-4e35cce63250"
+        }
+    ]
+}

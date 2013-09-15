@@ -1,0 +1,67 @@
+{
+    "name": "asdd",
+    "settings": {
+        "spacesToIndent": 4,
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "urlPrefix": "",
+        "exportPath": "",
+        "buildShouldOverwriteIndex": true
+    },
+    "xdsVersion": "2.2.2",
+    "xdsBuild": 991,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000503,
+    "framework": "touch22",
+    "topInstanceFileMap": {
+        "6ca97308-9969-42fa-9303-a68f87d74084": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        },
+        "70a030de-13a4-4ded-998a-68973ce9e4d7": {
+            "paths": [
+                "metadata/store/MyStore",
+                "app/store/override/MyStore.js",
+                "app/store/MyStore.js"
+            ],
+            "className": "MyStore"
+        },
+        "35ce1ab1-a44f-4cb5-bf63-94b696734923": {
+            "paths": [
+                "metadata/model/MyModel",
+                "app/model/override/MyModel.js",
+                "app/model/MyModel.js"
+            ],
+            "className": "MyModel"
+        },
+        "c09aea8b-01f6-44fb-9fc0-d00834a9f0b8": {
+            "paths": [
+                "metadata/view/MyPanel4",
+                "app/view/override/MyPanel4.js",
+                "app/view/MyPanel4.js"
+            ],
+            "className": "MyPanel4"
+        }
+    },
+    "viewOrderMap": {
+        "view": [
+            "c09aea8b-01f6-44fb-9fc0-d00834a9f0b8"
+        ],
+        "store": [
+            "70a030de-13a4-4ded-998a-68973ce9e4d7"
+        ],
+        "controller": [],
+        "model": [
+            "35ce1ab1-a44f-4cb5-bf63-94b696734923"
+        ],
+        "resource": [
+            "6ca97308-9969-42fa-9303-a68f87d74084"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}
