@@ -11,7 +11,7 @@
         ],
         "model": "MyModel",
         "storeId": "storeOfertas",
-        "designer|userClassName": "MyStore"
+        "designer|userClassName": "storeOfertas"
     },
     "designerId": "70a030de-13a4-4ded-998a-68973ce9e4d7"
 }

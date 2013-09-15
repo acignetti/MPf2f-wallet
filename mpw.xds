@@ -1,5 +1,5 @@
 {
-    "name": "asdd",
+    "name": "mpw",
     "settings": {
         "spacesToIndent": 4,
         "lineEnding": "CRLF",
@@ -23,11 +23,11 @@
         },
         "70a030de-13a4-4ded-998a-68973ce9e4d7": {
             "paths": [
-                "metadata/store/MyStore",
-                "app/store/override/MyStore.js",
-                "app/store/MyStore.js"
+                "metadata/store/storeOfertas",
+                "app/store/override/storeOfertas.js",
+                "app/store/storeOfertas.js"
             ],
-            "className": "MyStore"
+            "className": "storeOfertas"
         },
         "35ce1ab1-a44f-4cb5-bf63-94b696734923": {
             "paths": [
@@ -39,11 +39,11 @@
         },
         "c09aea8b-01f6-44fb-9fc0-d00834a9f0b8": {
             "paths": [
-                "metadata/view/MyPanel4",
-                "app/view/override/MyPanel4.js",
-                "app/view/MyPanel4.js"
+                "metadata/view/panelPrincipal",
+                "app/view/override/panelPrincipal.js",
+                "app/view/panelPrincipal.js"
             ],
-            "className": "MyPanel4"
+            "className": "panelPrincipal"
         }
     },
     "viewOrderMap": {

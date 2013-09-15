@@ -13,7 +13,7 @@
  * Do NOT hand edit this file.
  */
 
-Ext.define('MyApp.model.MyModel', {
+Ext.define('MPWallet.model.MyModel', {
     extend: 'Ext.data.Model',
 
     config: {

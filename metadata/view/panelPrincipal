@@ -8,8 +8,8 @@
     "userConfig": {
         "activeItem": 0,
         "container|animation": "scroll",
-        "id": "panel2",
-        "designer|userClassName": "MyPanel4",
+        "id": "panelPrincipal",
+        "designer|userClassName": "panelPrincipal",
         "designer|initialView": true,
         "layout": "card"
     },
@@ -59,7 +59,8 @@
                     "codeClass": null,
                     "userConfig": {
                         "height": 448,
-                        "padding": "50 15 15 15"
+                        "padding": "50 15 15 15",
+                        "designer|displayName": "formLogin"
                     },
                     "designerId": "58ded188-3368-4689-a559-2a17ec011ca2",
                     "cn": [
@@ -117,7 +118,7 @@
                                     "userConfig": {
                                         "fn": "onMybuttonTap",
                                         "implHandler": [
-                                            "var elemto = Ext.getCmp(\"panel2\");\r",
+                                            "var elemto = Ext.getCmp(\"panelPrincipal\");\r",
                                             "elemto.setActiveItem(1);"
                                         ],
                                         "name": "tap"
@@ -138,8 +139,9 @@
             },
             "codeClass": null,
             "userConfig": {
-                "id": "idPanelPrincipal",
-                "itemId": "panelPrincipal"
+                "id": "panelMenu",
+                "itemId": null,
+                "designer|displayName": "panelMenu"
             },
             "designerId": "e1047829-5694-41b4-8887-3786505ac715",
             "cn": [
@@ -152,7 +154,9 @@
                     "codeClass": null,
                     "userConfig": {
                         "centered": false,
-                        "height": "100%"
+                        "height": "100%",
+                        "id": "panelPagar",
+                        "designer|displayName": "tabPanelPagar"
                     },
                     "designerId": "6831b099-b394-4dfa-834a-345809cf0a63",
                     "cn": [
@@ -166,7 +170,8 @@
                             "userConfig": {
                                 "title": "Pagar",
                                 "centered": false,
-                                "height": "100%"
+                                "height": "100%",
+                                "designer|displayName": "panelPagar"
                             },
                             "designerId": "75ac03c6-c89c-4060-ba1d-bcf6a7b873c5",
                             "cn": [
@@ -179,7 +184,8 @@
                                     "codeClass": null,
                                     "userConfig": {
                                         "height": "100%",
-                                        "padding": "50 0 0 0"
+                                        "padding": "50 0 0 0",
+                                        "designer|displayName": "formCodigos"
                                     },
                                     "designerId": "02bbbfbf-cf92-4de4-84d3-d57dd73869f9",
                                     "cn": [
@@ -194,7 +200,8 @@
                                                 "html": "Ingresar Código",
                                                 "margin": "0 auto 0 auto",
                                                 "padding": "",
-                                                "width": 136
+                                                "width": 136,
+                                                "designer|displayName": "lblIngresarCodigo"
                                             },
                                             "designerId": "e340f8ee-1f65-4d2a-b272-9020aab90a42"
                                         },
@@ -207,6 +214,7 @@
                                             "codeClass": null,
                                             "userConfig": {
                                                 "margin": "10 20 0 20",
+                                                "designer|displayName": "textCodigo",
                                                 "label": ""
                                             },
                                             "designerId": "4cc32598-eda9-48df-9d2c-3038e4c162c7"
@@ -220,8 +228,10 @@
                                             "codeClass": null,
                                             "userConfig": {
                                                 "margin": "5% auto 0 auto",
+                                                "maxWidth": 150,
                                                 "ui": "action",
-                                                "width": "50%",
+                                                "width": 150,
+                                                "designer|displayName": "btnPagar",
                                                 "text": "Pagar"
                                             },
                                             "designerId": "895dc1aa-4bfc-46db-803d-104f83d6e8df"
@@ -235,7 +245,8 @@
                                             "codeClass": null,
                                             "userConfig": {
                                                 "margin": "20 auto 0 auto",
-                                                "width": 236
+                                                "width": 224,
+                                                "designer|displayName": "btnsLectura"
                                             },
                                             "designerId": "87d5ad35-64ec-40c2-b1d7-82cb2eea4bad",
                                             "cn": [
@@ -248,8 +259,10 @@
                                                     "codeClass": null,
                                                     "userConfig": {
                                                         "margin": "0 0 0 0",
+                                                        "maxWidth": 111,
                                                         "padding": "",
                                                         "width": 111,
+                                                        "designer|displayName": "btnLeerNfc",
                                                         "text": "Leer NFC"
                                                     },
                                                     "designerId": "6b9c0b85-b968-4dd4-9ec1-042100e965ae"
@@ -263,7 +276,9 @@
                                                     "codeClass": null,
                                                     "userConfig": {
                                                         "border": "",
+                                                        "maxWidth": 111,
                                                         "width": 111,
+                                                        "designer|displayName": "btnLeerQr",
                                                         "text": "Leer QR"
                                                     },
                                                     "designerId": "85ba2d03-e3df-49cd-8ec3-f4f950853366"
@@ -283,7 +298,8 @@
                             "codeClass": null,
                             "userConfig": {
                                 "title": "Ofertas",
-                                "height": "100%"
+                                "height": "100%",
+                                "designer|displayName": "panelOfertas"
                             },
                             "designerId": "880047c1-9e65-4570-86f8-fbe0cd119aa9",
                             "cn": [
@@ -295,7 +311,8 @@
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "height": "100%"
+                                        "height": "100%",
+                                        "designer|displayName": "panelPrinOfertas"
                                     },
                                     "designerId": "a8dfd410-83a5-415d-a447-d710c3bfec22",
                                     "cn": [
@@ -307,9 +324,50 @@
                                             },
                                             "codeClass": null,
                                             "userConfig": {
-                                                "html": "Ofertas cerca tuyo!"
+                                                "docked": "top",
+                                                "html": "Ofertas cerca tuyo!",
+                                                "designer|displayName": "lblOfertasCerca"
                                             },
                                             "designerId": "8ceb08c8-6efa-4bc6-b32c-949904946b27"
+                                        },
+                                        {
+                                            "type": "Ext.field.Search",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "docked": "top",
+                                                "itemId": "mysearchfield2",
+                                                "width": 440,
+                                                "label": "",
+                                                "labelAlign": "right",
+                                                "name": "field"
+                                            },
+                                            "designerId": "830f27a8-9be9-4ca0-87cf-0ed8506205d2",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onMysearchfield2Keyup",
+                                                        "implHandler": [
+                                                            "var filtro = textfield.getValue();\r",
+                                                            "var store = Ext.getStore(\"storeOfertas\");\r",
+                                                            "\r",
+                                                            "store.filter( 'firstName', filtro, true,false);\r",
+                                                            "store.load();"
+                                                        ],
+                                                        "name": "keyup"
+                                                    },
+                                                    "designerId": "6080d868-67ed-4de9-b01a-af7c4a21c61b"
+                                                }
+                                            ]
                                         },
                                         {
                                             "type": "Ext.dataview.List",
@@ -319,8 +377,15 @@
                                             },
                                             "codeClass": null,
                                             "userConfig": {
-                                                "height": "100%",
+                                                "height": 1211,
+                                                "id": "listOfertas",
                                                 "itemId": "mylist2",
+                                                "ui": "round",
+                                                "width": "100%",
+                                                "designer|displayName": "listOfertas",
+                                                "scrollable": [
+                                                    "vertical"
+                                                ],
                                                 "store": "storeOfertas"
                                             },
                                             "designerId": "6c2ded77-e751-4ce9-860a-fd8da996c5a8",
@@ -334,7 +399,7 @@
                                                     "codeClass": null,
                                                     "userConfig": {
                                                         "implHandler": [
-                                                            "<div class=\"contact\">{firstName} <strong>{lastName}</strong></div>"
+                                                            "<div class=\"contact\">Nombre: {firstName} <strong>{lastName}</strong></div>"
                                                         ],
                                                         "designer|displayName": "itemTpl"
                                                     },
@@ -350,7 +415,7 @@
                                                     "userConfig": {
                                                         "fn": "onMylist2ItemTap",
                                                         "implHandler": [
-                                                            "var evento = Ext.getCmp('panel2');\r",
+                                                            "var evento = Ext.getCmp('panelPrincipal');\r",
                                                             "evento.setActiveItem(2);"
                                                         ],
                                                         "name": "itemtap"
@@ -358,6 +423,101 @@
                                                     "designerId": "90b009ee-6ca3-4b63-84b6-dbbfc1480e89"
                                                 }
                                             ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "title": "Buscar",
+                                "designer|displayName": "panelBuscar"
+                            },
+                            "designerId": "f5ed48df-d167-470c-ba42-3879825fcca7",
+                            "cn": [
+                                {
+                                    "type": "Ext.Container",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "height": 47,
+                                        "padding": "0 50 0 0"
+                                    },
+                                    "designerId": "6fe089ab-696e-4b91-8b95-ecfb0c10e5f1",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Img",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "docked": "left",
+                                                "height": 50,
+                                                "ui": "",
+                                                "width": 60,
+                                                "src": "app/resource/searchIcon.png"
+                                            },
+                                            "designerId": "87a947e1-aaea-4e00-8cae-293e96bbf9c5"
+                                        },
+                                        {
+                                            "type": "Ext.field.Text",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "docked": "left",
+                                                "height": 50,
+                                                "margin": 5,
+                                                "padding": "0 20 0 0",
+                                                "width": "80%",
+                                                "label": "",
+                                                "labelAlign": "right",
+                                                "name": "field"
+                                            },
+                                            "designerId": "cf9f707e-a670-4290-a188-f390e10600eb"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.dataview.List",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "height": 377,
+                                        "width": "100%"
+                                    },
+                                    "designerId": "73ba55f4-b41a-42c4-bfc8-087c121d4f1b",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.XTemplate",
+                                            "reference": {
+                                                "name": "itemTpl",
+                                                "type": "object"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "implHandler": [
+                                                    "<div>List Item {string}</div>"
+                                                ],
+                                                "designer|displayName": "itemTpl"
+                                            },
+                                            "designerId": "16b60bef-8891-42ba-af51-17bf5936efcf"
                                         }
                                     ]
                                 }
@@ -375,9 +535,60 @@
             },
             "codeClass": null,
             "userConfig": {
-                "id": "panel6"
+                "id": "panelOfertaDetalle",
+                "designer|displayName": "panelOfertaDetalles"
             },
-            "designerId": "52c9fb52-ec2f-40bb-a9eb-4e35cce63250"
+            "designerId": "52c9fb52-ec2f-40bb-a9eb-4e35cce63250",
+            "cn": [
+                {
+                    "type": "Ext.Toolbar",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": "bottom"
+                    },
+                    "designerId": "7d806425-53da-4761-866a-e0c0e5c7de98",
+                    "cn": [
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "mybutton37",
+                                "ui": "back",
+                                "designer|displayName": "btnVolver",
+                                "text": "Volver"
+                            },
+                            "designerId": "09b2d902-9a4f-4c7d-a1b8-e8f49a963719",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onMybutton37Tap",
+                                        "implHandler": [
+                                            "Ext.getCmp(\"panelPrincipal\").setActiveItem(1);\r",
+                                            "Ext.getCmp(\"listOfertas\").deselectAll();"
+                                        ],
+                                        "name": "tap"
+                                    },
+                                    "designerId": "fb33c506-c7c8-4a38-984b-f8f03454a69f"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }

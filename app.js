@@ -23,16 +23,16 @@ Ext.application({
         'MyModel'
     ],
     stores: [
-        'MyStore'
+        'storeOfertas'
     ],
     views: [
-        'MyPanel4'
+        'panelPrincipal'
     ],
-    name: 'MyApp',
+    name: 'MPWallet',
 
     launch: function() {
 
-        Ext.create('MyApp.view.MyPanel4', {fullscreen: true});
+        Ext.create('MPWallet.view.panelPrincipal', {fullscreen: true});
     }
 
 });

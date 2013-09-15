@@ -10,12 +10,12 @@
             "MyModel"
         ],
         "stores": [
-            "MyStore"
+            "storeOfertas"
         ],
         "views": [
-            "MyPanel4"
+            "panelPrincipal"
         ],
-        "name": "MyApp"
+        "name": "MPWallet"
     },
     "designerId": "application"
 }
