@@ -1,0 +1,14 @@
+var QrManager = function(){
+
+	//*********************************SINGLETON********************************
+    if (QrManager.prototype._singletonInstance) {
+        return QrManager.prototype._singletonInstance;
+    }
+    QrManager.prototype._singletonInstance = this;  
+
+
+    QrManager.prototype.startQr = function(callbackExito){
+    	if(callbackExito)
+    		callbackExito("LecturaQR");
+    }
+}

@@ -23,20 +23,53 @@ Ext.define('MPWallet.store.storeOfertas', {
     config: {
         data: [
             {
-                firstName: 'Ed',
-                lastName: 'Spencer'
+                id: 1,
+                titulo: 'Speed',
+                precio: '10.00',
+                lugar: 'Vm',
+                local: 'Garbarino'
             },
             {
-                firstName: 'Tommy',
-                lastName: 'Maintz'
+                id: 2,
+                titulo: 'Speed1',
+                precio: '11.00',
+                lugar: 'Vm1',
+                local: 'Garbarino1'
             },
             {
-                firstName: 'Aaron',
-                lastName: 'Conran'
+                id: 3,
+                titulo: 'Speed2',
+                precio: '12.00',
+                lugar: 'Vm2',
+                local: 'Garbarino2'
             },
             {
-                firstName: 'Jamie',
-                lastName: 'Avins'
+                id: 4,
+                titulo: 'Speed3',
+                precio: '13.00',
+                lugar: 'Vm3',
+                local: 'Garbarino3'
+            },
+            {
+                id: 5,
+                titulo: 'Speed4',
+                precio: '14.00',
+                lugar: 'Vm4',
+                local: 'Garbarino4'
+            },
+            {
+                id: 6,
+                titulo: 'Speed5',
+                precio: '15.00',
+                lugar: 'Vm5',
+                local: 'Garbarino5'
+            },
+            {
+                id: 7,
+                titulo: 'Speed6',
+                precio: '16.00',
+                lugar: 'Vm6',
+                local: 'Garbarino6'
             }
         ],
         model: 'MPWallet.model.MyModel',

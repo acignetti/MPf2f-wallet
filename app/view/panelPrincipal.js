@@ -19,6 +19,7 @@ Ext.define('MPWallet.view.panelPrincipal', {
     config: {
         activeItem: 0,
         id: 'panelPrincipal',
+        style: '',
         layout: {
             animation: 'scroll',
             type: 'card'
@@ -31,7 +32,8 @@ Ext.define('MPWallet.view.panelPrincipal', {
                     {
                         xtype: 'image',
                         height: 86,
-                        id: 'img'
+                        id: 'img',
+                        src: 'app/resource/logo.png'
                     },
                     {
                         xtype: 'formpanel',
@@ -71,6 +73,7 @@ Ext.define('MPWallet.view.panelPrincipal', {
                         centered: false,
                         height: '100%',
                         id: 'panelPagar',
+                        style: '',
                         items: [
                             {
                                 xtype: 'container',
@@ -92,6 +95,7 @@ Ext.define('MPWallet.view.panelPrincipal', {
                                             },
                                             {
                                                 xtype: 'textfield',
+                                                id: 'textCodigo',
                                                 margin: '10 20 0 20',
                                                 label: ''
                                             },
@@ -119,6 +123,7 @@ Ext.define('MPWallet.view.panelPrincipal', {
                                                     {
                                                         xtype: 'button',
                                                         border: '',
+                                                        itemId: 'mybutton63',
                                                         maxWidth: 111,
                                                         width: 111,
                                                         text: 'Leer QR'
@@ -147,23 +152,38 @@ Ext.define('MPWallet.view.panelPrincipal', {
                                                 xtype: 'searchfield',
                                                 docked: 'top',
                                                 itemId: 'mysearchfield2',
-                                                width: 440,
+                                                margin: 10,
+                                                width: '80%',
                                                 label: '',
                                                 labelAlign: 'right',
                                                 name: 'field'
                                             },
                                             {
-                                                xtype: 'list',
-                                                height: 1211,
-                                                id: 'listOfertas',
-                                                itemId: 'mylist2',
-                                                ui: 'round',
+                                                xtype: 'container',
+                                                docked: 'bottom',
+                                                height: '100%',
+                                                ui: 'dark',
                                                 width: '100%',
-                                                scrollable: 'vertical',
-                                                itemTpl: [
-                                                    '<div class="contact">Nombre: {firstName} <strong>{lastName}</strong></div>'
-                                                ],
-                                                store: 'storeOfertas'
+                                                layout: {
+                                                    type: 'card'
+                                                },
+                                                items: [
+                                                    {
+                                                        xtype: 'list',
+                                                        height: '85%',
+                                                        id: 'listOfertas',
+                                                        itemId: 'mylist2',
+                                                        margin: '0 0 100 0 ',
+                                                        ui: 'round',
+                                                        width: '100%',
+                                                        scrollable: true,
+                                                        itemTpl: [
+                                                            '<div class="contact"><b>{titulo}<b><br>Precio: ${precio}<br> En {local} ({lugar})</div>'
+                                                        ],
+                                                        scrollToTopOnRefresh: false,
+                                                        store: 'storeOfertas'
+                                                    }
+                                                ]
                                             }
                                         ]
                                     }
@@ -216,6 +236,7 @@ Ext.define('MPWallet.view.panelPrincipal', {
             {
                 xtype: 'panel',
                 id: 'panelOfertaDetalle',
+                scrollable: 'vertical',
                 items: [
                     {
                         xtype: 'toolbar',
@@ -228,6 +249,66 @@ Ext.define('MPWallet.view.panelPrincipal', {
                                 text: 'Volver'
                             }
                         ]
+                    },
+                    {
+                        xtype: 'label',
+                        html: 'Texto',
+                        id: 'OD_labelTitulo'
+                    },
+                    {
+                        xtype: 'spacer',
+                        height: 25
+                    },
+                    {
+                        xtype: 'label',
+                        html: '$55.00',
+                        id: 'OD_labelPrecio'
+                    },
+                    {
+                        xtype: 'label',
+                        html: 'Articulo nuevo',
+                        id: 'OD_descArticulo'
+                    },
+                    {
+                        xtype: 'spacer',
+                        height: 29
+                    },
+                    {
+                        xtype: 'label',
+                        html: '12 Cuotas de 12.44',
+                        id: 'OD_descripOferta'
+                    },
+                    {
+                        xtype: 'label',
+                        html: 'Medios de Pagos: Targeta Verde, Nevada, Mercado Pago, verde, lalal ., esta',
+                        id: 'OD_pagos',
+                        width: ''
+                    },
+                    {
+                        xtype: 'image',
+                        height: 201,
+                        id: 'OD_img',
+                        margin: '20 auto 0 auto',
+                        maxWidth: 300,
+                        minWidth: 300,
+                        src: 'app/resource/searchIcon.png'
+                    },
+                    {
+                        xtype: 'segmentedbutton',
+                        margin: '20 auto 20 auto',
+                        width: 214,
+                        items: [
+                            {
+                                xtype: 'button',
+                                id: 'OD_btnReservar',
+                                text: 'Reservar'
+                            },
+                            {
+                                xtype: 'button',
+                                id: 'OD_btnVerMapa',
+                                text: 'Ver Mapa'
+                            }
+                        ]
                     }
                 ]
             }
@@ -237,6 +318,11 @@ Ext.define('MPWallet.view.panelPrincipal', {
                 fn: 'onMybuttonTap',
                 event: 'tap',
                 delegate: '#btnEntrar'
+            },
+            {
+                fn: 'onMybutton63Tap',
+                event: 'tap',
+                delegate: '#mybutton63'
             },
             {
                 fn: 'onMysearchfield2Keyup',
@@ -261,6 +347,12 @@ Ext.define('MPWallet.view.panelPrincipal', {
         elemto.setActiveItem(1);
     },
 
+    onMybutton63Tap: function(button, e, eOpts) {
+        new QrManager().startQr(function(lectura){
+            Ext.getCmp('textCodigo').setText(lectura);
+        });
+    },
+
     onMysearchfield2Keyup: function(textfield, e, eOpts) {
         var filtro = textfield.getValue();
         var store = Ext.getStore("storeOfertas");
@@ -271,6 +363,20 @@ Ext.define('MPWallet.view.panelPrincipal', {
 
     onMylist2ItemTap: function(dataview, index, target, record, e, eOpts) {
         var evento = Ext.getCmp('panelPrincipal');
+
+
+        var titulo = Ext.getCmp("OD_labelTitulo");
+        titulo.setHtml(record.get("titulo"));
+
+        var precio = Ext.getCmp("OD_labelPrecio");
+        precio.setHtml(record.get("precio"));
+
+        var descArticulo = Ext.getCmp("OD_descripOferta");
+        descArticulo.setHtml(record.get("id") + " Articulo Nuevo");
+
+        var pagos = Ext.getCmp("OD_pagos");
+        pagos.setHtml(record.get("id") + " Pagos disponibles: Nevada, Mercado Pago");
+
         evento.setActiveItem(2);
     },
 

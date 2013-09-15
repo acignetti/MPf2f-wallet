@@ -1,0 +1,13 @@
+{
+    "type": "jsresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "js",
+        "url": "qrManager"
+    },
+    "designerId": "5cdbd5a3-2329-481c-856a-7e980b67845c"
+}

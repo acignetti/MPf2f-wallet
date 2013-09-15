@@ -19,10 +19,19 @@ Ext.define('MPWallet.model.MyModel', {
     config: {
         fields: [
             {
-                name: 'lastName'
+                name: 'id'
             },
             {
-                name: 'firstName'
+                name: 'titulo'
+            },
+            {
+                name: 'precio'
+            },
+            {
+                name: 'lugar'
+            },
+            {
+                name: 'local'
             }
         ]
     }

@@ -44,6 +44,12 @@
                 "app/view/panelPrincipal.js"
             ],
             "className": "panelPrincipal"
+        },
+        "5cdbd5a3-2329-481c-856a-7e980b67845c": {
+            "paths": [
+                "metadata/resource/js"
+            ],
+            "className": "js"
         }
     },
     "viewOrderMap": {
@@ -58,7 +64,8 @@
             "35ce1ab1-a44f-4cb5-bf63-94b696734923"
         ],
         "resource": [
-            "6ca97308-9969-42fa-9303-a68f87d74084"
+            "6ca97308-9969-42fa-9303-a68f87d74084",
+            "5cdbd5a3-2329-481c-856a-7e980b67845c"
         ],
         "app": [
             "application"

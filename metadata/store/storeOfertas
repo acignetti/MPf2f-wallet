@@ -7,7 +7,15 @@
     "codeClass": null,
     "userConfig": {
         "data": [
-            "[{firstName: \"Ed\",    lastName: \"Spencer\"},{firstName: \"Tommy\", lastName: \"Maintz\"},{firstName: \"Aaron\", lastName: \"Conran\"},{firstName: \"Jamie\", lastName: \"Avins\"}]"
+            "[\r",
+            "    {id: 1, titulo: \"Speed\",precio: \"10.00\", lugar: \"Vm\", local: \"Garbarino\"},\r",
+            "    {id: 2, titulo: \"Speed1\",precio: \"11.00\", lugar: \"Vm1\", local: \"Garbarino1\"},\r",
+            "    {id: 3, titulo: \"Speed2\",precio: \"12.00\", lugar: \"Vm2\", local: \"Garbarino2\"},\r",
+            "    {id: 4, titulo: \"Speed3\",precio: \"13.00\", lugar: \"Vm3\", local: \"Garbarino3\"},\r",
+            "    {id: 5, titulo: \"Speed4\",precio: \"14.00\", lugar: \"Vm4\", local: \"Garbarino4\"},\r",
+            "    {id: 6, titulo: \"Speed5\",precio: \"15.00\", lugar: \"Vm5\", local: \"Garbarino5\"},\r",
+            "    {id: 7, titulo: \"Speed6\",precio: \"16.00\", lugar: \"Vm6\", local: \"Garbarino6\"}\r",
+            "]"
         ],
         "model": "MyModel",
         "storeId": "storeOfertas",
