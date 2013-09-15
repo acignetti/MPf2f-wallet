@@ -1,0 +1,68 @@
+var PagosManager = function(){
+
+
+	//*********************************SINGLETON********************************
+    if (PagosManager.prototype._singletonInstance) {
+        return PagosManager.prototype._singletonInstance;
+    }
+    PagosManager.prototype._singletonInstance = this;  
+    
+    
+    
+    PagosManager.prototype.generarPago = function(){
+        
+        console.log("MWP: GenerarPago: qrCodigo: " + var_pagoUrl);
+        
+        function callbackExito(datos){
+            
+            console.log("MWP: GenerarPago: Exito" + datos);
+            var_pagoUrl = null;
+            
+            if(datos.status == true || datos.status == "true"){
+            	$MPC.openCheckout({
+                    url: datos.init_point,
+                    mode: "popup", //modal, popup, blank, redirect
+                    onreturn: function(json) {
+
+                          if (json.collection_status=='approved'){
+                            alert ('Pago acreditado');
+                          } else if(json.collection_status=='pending'){
+                            alert ('El usuario no completó el pago');
+                          } else if(json.collection_status=='in_process'){    
+                            alert ('El pago está siendo revisado');    
+                          } else if(json.collection_status=='rejected'){
+                            alert ('El pago fué rechazado, el usuario puede intentar nuevamente el pago');
+                          } else if(json.collection_status==null){
+                            alert ('El usuario no completó el proceso de pago, no se ha generado ningún pago');
+                          }
+                        
+                    },
+                    onclose: function(){
+                    	alert("hola");
+                	}
+                }); 
+            }
+            else{
+                alert("Venta no disponible");
+                Ext.getCmp('idEstadoPago').setHtml("Ups! El pago ya no se encuentra disponible");
+            }
+            
+            
+        	
+        }
+        
+        function callbackFracaso(){
+            
+            var_pagoUrl = null;
+        	console.log("MWP: GenerarPago: Error");
+            Ext.getCmp('idEstadoPago').setHtml("Ups! Hubo un error en el pago. Intente nuevamente leyendo NFC/QR");
+        }
+        
+        //http://10.52.213.157/mp-ws/operaciones.php?operacion=mp_checkout&id=15&username=topo&session_key=a1ccefe8f5f888487964c2574e36e47a
+    	
+        //var_pagoUrl += "&username="+usss+"&session_key="+sessionKey;
+        new ServiceManager().queueService(var_pagoUrl,null, callbackExito,callbackFracaso);
+        
+        
+    }
+}

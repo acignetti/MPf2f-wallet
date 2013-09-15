@@ -1,0 +1,21 @@
+C:\Users\Erwin\Desktop\MPWallet\bin\classes.dex : \
+C:\Users\Erwin\Desktop\MPWallet\bin\classes\com\erwinsons\mpwallet\BuildConfig.class \
+C:\Users\Erwin\Desktop\MPWallet\bin\classes\com\erwinsons\mpwallet\JavascriptCallbackProcessor.class \
+C:\Users\Erwin\Desktop\MPWallet\bin\classes\com\erwinsons\mpwallet\Optimus$1.class \
+C:\Users\Erwin\Desktop\MPWallet\bin\classes\com\erwinsons\mpwallet\Optimus.class \
+C:\Users\Erwin\Desktop\MPWallet\bin\classes\com\erwinsons\mpwallet\plugins\IntentIntegrator$1.class \
+C:\Users\Erwin\Desktop\MPWallet\bin\classes\com\erwinsons\mpwallet\plugins\IntentIntegrator$2.class \
+C:\Users\Erwin\Desktop\MPWallet\bin\classes\com\erwinsons\mpwallet\plugins\IntentIntegrator.class \
+C:\Users\Erwin\Desktop\MPWallet\bin\classes\com\erwinsons\mpwallet\plugins\IntentResult.class \
+C:\Users\Erwin\Desktop\MPWallet\bin\classes\com\erwinsons\mpwallet\plugins\QrPlugin.class \
+C:\Users\Erwin\Desktop\MPWallet\bin\classes\com\erwinsons\mpwallet\R$attr.class \
+C:\Users\Erwin\Desktop\MPWallet\bin\classes\com\erwinsons\mpwallet\R$drawable.class \
+C:\Users\Erwin\Desktop\MPWallet\bin\classes\com\erwinsons\mpwallet\R$id.class \
+C:\Users\Erwin\Desktop\MPWallet\bin\classes\com\erwinsons\mpwallet\R$layout.class \
+C:\Users\Erwin\Desktop\MPWallet\bin\classes\com\erwinsons\mpwallet\R$menu.class \
+C:\Users\Erwin\Desktop\MPWallet\bin\classes\com\erwinsons\mpwallet\R$string.class \
+C:\Users\Erwin\Desktop\MPWallet\bin\classes\com\erwinsons\mpwallet\R$xml.class \
+C:\Users\Erwin\Desktop\MPWallet\bin\classes\com\erwinsons\mpwallet\R.class \
+C:\Users\Erwin\Desktop\MPWallet\bin\dexedLibs\annotations-bd73ce04e473cca10eb621a925a77389.jar \
+C:\Users\Erwin\Desktop\MPWallet\bin\dexedLibs\cordova-2.0.0-4cf90c4289d941a2fc60aa8de3738df9.jar \
+C:\Users\Erwin\Desktop\MPWallet\bin\dexedLibs\zbar-8936937a8a6ed9fb29d516af3b70af67.jar \

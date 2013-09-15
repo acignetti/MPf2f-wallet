@@ -1,0 +1,13 @@
+{
+    "type": "jsresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "js3",
+        "url": "pagosManager"
+    },
+    "designerId": "2e3710f2-f9f6-42b0-b4b8-4c601dbbcf51"
+}

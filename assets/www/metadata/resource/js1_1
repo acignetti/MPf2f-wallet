@@ -1,0 +1,13 @@
+{
+    "type": "jsresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "js1",
+        "url": "https://www.mercadopago.com/org-img/jsapi/mptools/buttons/render.js"
+    },
+    "designerId": "b8f01b30-47e7-498a-b5af-39db54ad4d42"
+}

@@ -1,0 +1,6 @@
+# view AndroidManifest.xml #generated:37
+-keep class com.erwinsons.mpwallet.Optimus { <init>(...); }
+
+# view AndroidManifest.xml #generated:47
+-keep class com.erwinsons.mpwallet.controllers.qr.CameraTestActivity { <init>(...); }
+

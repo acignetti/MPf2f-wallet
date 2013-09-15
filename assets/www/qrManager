@@ -1,0 +1,50 @@
+var QrManager = function(){
+
+	//*********************************SINGLETON********************************
+    if (QrManager.prototype._singletonInstance) {
+        return QrManager.prototype._singletonInstance;
+    }
+    QrManager.prototype._singletonInstance = this;  
+
+    var initQR = function(successfull){
+        window.plugins.JavascriptCallbackProcessor.execute("startQR",[],succesStartQR,failStartQR);
+        function succesStartQR(){            
+            
+            function exito(resultado){
+               // alert("El còdigo es: "+resultado);
+               
+                successfull(resultado);
+            }
+            
+            getQr(exito);
+        }
+        function failStartQR(){
+            alert("No se pudo leer QR");
+        }  
+    }
+
+    QrManager.prototype.startQr = function(callbackExito){
+        initQR(callbackExito);
+        console.log("MPW: Start Qr");
+    	
+    }
+
+    function getQr(exitoCallback){
+        
+        var intervalo = setInterval(function(){
+            window.plugins.JavascriptCallbackProcessor.execute("getQR",[],exito, fallo);
+            function exito(resultado){
+                var dato = resultado;
+                
+                if(dato){
+                    exitoCallback(dato);
+                    clearInterval(intervalo);
+                }
+            }
+
+            function fallo(){
+                alert("Fallo al leer");
+            }
+        }, 200);
+    }
+}

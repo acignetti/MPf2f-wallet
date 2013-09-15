@@ -1,0 +1,44 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "data": null,
+        "model": "MyModel",
+        "storeId": "storeOfertas",
+        "designer|userClassName": "storeOfertas"
+    },
+    "designerId": "70a030de-13a4-4ded-998a-68973ce9e4d7",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "http://10.52.213.157/mp-ws/operaciones.php?operacion=sales_deals&lat=-33.27802477887706&lon=-66.31584810472997&range=50"
+            },
+            "designerId": "d3abca50-1288-4f0a-95bf-941bffb747b2",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "deals"
+                    },
+                    "designerId": "64349837-2049-4380-bcbe-77b4a98b6f1e"
+                }
+            ]
+        }
+    ]
+}

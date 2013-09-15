@@ -1,0 +1,166 @@
+{
+    "name": "wm",
+    "settings": {
+        "spacesToIndent": 4,
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "urlPrefix": "",
+        "exportPath": "C:/AppServ/www/test",
+        "buildShouldOverwriteIndex": true
+    },
+    "xdsVersion": "2.2.2",
+    "xdsBuild": 991,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000503,
+    "framework": "touch22",
+    "topInstanceFileMap": {
+        "6ca97308-9969-42fa-9303-a68f87d74084": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        },
+        "70a030de-13a4-4ded-998a-68973ce9e4d7": {
+            "paths": [
+                "metadata/store/storeOfertas",
+                "app/store/override/storeOfertas.js",
+                "app/store/storeOfertas.js"
+            ],
+            "className": "storeOfertas"
+        },
+        "35ce1ab1-a44f-4cb5-bf63-94b696734923": {
+            "paths": [
+                "metadata/model/MyModel",
+                "app/model/override/MyModel.js",
+                "app/model/MyModel.js"
+            ],
+            "className": "MyModel"
+        },
+        "c09aea8b-01f6-44fb-9fc0-d00834a9f0b8": {
+            "paths": [
+                "metadata/view/panelPrincipal",
+                "app/view/override/panelPrincipal.js",
+                "app/view/panelPrincipal.js"
+            ],
+            "className": "panelPrincipal"
+        },
+        "5cdbd5a3-2329-481c-856a-7e980b67845c": {
+            "paths": [
+                "metadata/resource/js"
+            ],
+            "className": "js"
+        },
+        "b8f01b30-47e7-498a-b5af-39db54ad4d42": {
+            "paths": [
+                "metadata/resource/js1"
+            ],
+            "className": "js1"
+        },
+        "2391bf99-0152-42b2-82b6-e4b7639d59a7": {
+            "paths": [
+                "metadata/resource/js2"
+            ],
+            "className": "js2"
+        },
+        "2e3710f2-f9f6-42b0-b4b8-4c601dbbcf51": {
+            "paths": [
+                "metadata/resource/js3"
+            ],
+            "className": "js3"
+        },
+        "236abd1d-841c-44f9-8c67-5fb59465d531": {
+            "paths": [
+                "metadata/resource/js5"
+            ],
+            "className": "js5"
+        },
+        "b33253dc-9297-4ad1-8f63-74e4f89d7014": {
+            "paths": [
+                "metadata/resource/js4"
+            ],
+            "className": "js4"
+        },
+        "86e9087b-4643-419e-9d98-57a8b35e91b3": {
+            "paths": [
+                "metadata/store/storeML",
+                "app/store/override/storeML.js",
+                "app/store/storeML.js"
+            ],
+            "className": "storeML"
+        },
+        "6697e6b2-9099-41cb-9b73-50475887c54e": {
+            "paths": [
+                "metadata/model/modelML",
+                "app/model/override/modelML.js",
+                "app/model/modelML.js"
+            ],
+            "className": "modelML"
+        },
+        "0b414d30-926e-4ff1-be00-c61c91aa0069": {
+            "paths": [
+                "metadata/resource/js6"
+            ],
+            "className": "js6"
+        },
+        "53de3907-8030-44b0-a86e-d8ff2a1b1bb5": {
+            "paths": [
+                "metadata/resource/js7"
+            ],
+            "className": "js7"
+        },
+        "a40ddfde-1a92-4aef-a1ab-dd4ad6d2378d": {
+            "paths": [
+                "metadata/resource/GoogleMapsAPI"
+            ],
+            "className": "GoogleMapsAPI"
+        },
+        "2454b877-f1d2-4831-8f8f-de62a29e472c": {
+            "paths": [
+                "metadata/store/MyStore",
+                "app/store/override/MyStore.js",
+                "app/store/MyStore.js"
+            ],
+            "className": "MyStore"
+        },
+        "f1d41ea1-82db-4d88-8fab-a302d13ed2d1": {
+            "paths": [
+                "metadata/model/modelResumen",
+                "app/model/override/modelResumen.js",
+                "app/model/modelResumen.js"
+            ],
+            "className": "modelResumen"
+        }
+    },
+    "viewOrderMap": {
+        "view": [
+            "c09aea8b-01f6-44fb-9fc0-d00834a9f0b8"
+        ],
+        "store": [
+            "70a030de-13a4-4ded-998a-68973ce9e4d7",
+            "86e9087b-4643-419e-9d98-57a8b35e91b3",
+            "2454b877-f1d2-4831-8f8f-de62a29e472c"
+        ],
+        "controller": [],
+        "model": [
+            "35ce1ab1-a44f-4cb5-bf63-94b696734923",
+            "6697e6b2-9099-41cb-9b73-50475887c54e",
+            "f1d41ea1-82db-4d88-8fab-a302d13ed2d1"
+        ],
+        "resource": [
+            "6ca97308-9969-42fa-9303-a68f87d74084",
+            "5cdbd5a3-2329-481c-856a-7e980b67845c",
+            "b8f01b30-47e7-498a-b5af-39db54ad4d42",
+            "2391bf99-0152-42b2-82b6-e4b7639d59a7",
+            "2e3710f2-f9f6-42b0-b4b8-4c601dbbcf51",
+            "236abd1d-841c-44f9-8c67-5fb59465d531",
+            "b33253dc-9297-4ad1-8f63-74e4f89d7014",
+            "0b414d30-926e-4ff1-be00-c61c91aa0069",
+            "53de3907-8030-44b0-a86e-d8ff2a1b1bb5",
+            "a40ddfde-1a92-4aef-a1ab-dd4ad6d2378d"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

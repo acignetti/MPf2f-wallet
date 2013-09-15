@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">        
+    <item android:id="@+id/Sincronizar"
+          android:title="Sincronizar" />    
+    <item android:id="@+id/Opciones"
+          android:title="Opciones" />
+    <item android:id="@+id/CerrarTramite"
+          android:title="Cerrar Trámite" />
+    <item android:id="@+id/About"
+          android:title="About" />
+    <item android:id="@+id/Logout"
+          android:title="Logout" />
+    <item android:id="@+id/Minimizar"
+          android:title="Minimizar" />
+</menu>
+
+

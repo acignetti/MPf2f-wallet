@@ -1,0 +1,25 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "MyModel",
+            "modelML",
+            "modelResumen"
+        ],
+        "stores": [
+            "storeOfertas",
+            "storeML",
+            "MyStore"
+        ],
+        "views": [
+            "panelPrincipal"
+        ],
+        "name": "MyApp"
+    },
+    "designerId": "application"
+}

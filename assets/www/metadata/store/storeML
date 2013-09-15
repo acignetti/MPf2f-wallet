@@ -1,0 +1,43 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "model": "modelML",
+        "storeId": "storeML",
+        "designer|userClassName": "storeML"
+    },
+    "designerId": "86e9087b-4643-419e-9d98-57a8b35e91b3",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": null
+            },
+            "designerId": "5bf66d58-3346-4f08-88f5-4bb683f0c2ec",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "results",
+                        "record": null
+                    },
+                    "designerId": "e95b5b99-30cf-4150-b2bb-2dc0f3ace6eb"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "MyModel"
+        ],
+        "stores": [
+            "storeOfertas"
+        ],
+        "views": [
+            "panelPrincipal"
+        ],
+        "name": "MPWallet"
+    },
+    "designerId": "application"
+}

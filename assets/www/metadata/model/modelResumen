@@ -1,0 +1,74 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "modelResumen"
+    },
+    "designerId": "f1d41ea1-82db-4d88-8fab-a302d13ed2d1",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "reason"
+            },
+            "designerId": "9dbc3286-ed33-4279-a768-0cd95838f266"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "total_paid_amount"
+            },
+            "designerId": "32e0f2d5-25a1-4abe-b0ee-afdc4e645222"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "status"
+            },
+            "designerId": "ea4184b0-a2cb-4feb-bfb7-1e91b5efb9fb"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "money_release_date"
+            },
+            "designerId": "917ef85d-1147-4feb-bee0-edda150213d7"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "collection"
+            },
+            "designerId": "2fee76d8-89ca-4ee7-873b-79666a91c426"
+        }
+    ]
+}

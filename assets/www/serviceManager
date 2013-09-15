@@ -1,0 +1,36 @@
+var ServiceManager = function(){
+
+
+	//*********************************SINGLETON********************************
+    if (ServiceManager.prototype._singletonInstance) {
+        return ServiceManager.prototype._singletonInstance;
+    }
+    ServiceManager.prototype._singletonInstance = this;  
+
+
+    ServiceManager.prototype.queueService = function(url,datos, callbackExito,callbackFracaso){
+        console.log("MPW: Service url:" + url + " || datos: " + datos);
+            var p = datos;
+            $.ajax({
+                type: "GET",
+                url: url,
+                timeout:60000, 
+                data: p,
+                headers: {
+                    "Authorization": datos
+                },
+                cache: false,
+                success: function(data){  
+                    console.log("MWP: Exito Service: data: " + data);
+
+                    if(callbackExito)
+                    	callbackExito(data);
+                },
+                error: function(){
+                    console.log("MWP: Error Service");
+                    if(callbackFracaso)
+                    	callbackFracaso();
+                }
+            });   
+    };
+};

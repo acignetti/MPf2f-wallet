@@ -1,0 +1,61 @@
+var LoginManager = function(){
+
+    //*********************************SINGLETON********************************
+    if (LoginManager.prototype._singletonInstance) {
+        return LoginManager.prototype._singletonInstance;
+    }
+    LoginManager.prototype._singletonInstance = this;  
+    
+    
+    LoginManager.prototype.validarLog = function(cbExito){
+        
+        
+        Ext.getCmp('id_lblMensajeLogin').setHtml("");
+        
+        var usuario = Ext.getCmp("textUsuario").getValue();
+        var pass =  Ext.getCmp("textPass").getValue();
+        
+        console.log("DATOS: U: " + usuario + " | P: " + pass);
+        
+        if(usuario.length ==  0 || pass.length == 0)
+        	Ext.getCmp('id_lblMensajeLogin').setHtml("Complete los datos");
+        else{
+            var datos = {
+                    operacion: 'user_login',
+                    username: usuario,
+                    password:pass
+            }
+            
+            var url = "http://10.52.213.157/mp-ws/operaciones.php";
+            
+            function callbackExito(dataStr){
+
+                if(dataStr.status == true || dataStr.status == "true"){
+                    sessionKey = dataStr.session.session_key;
+                    usss = dataStr.session.user;
+                    loginOK = true;
+                    var elemto = Ext.getCmp("panelPrincipal");
+                    elemto.setActiveItem(1);
+                    
+                    var url = "http://10.52.213.157/mp-ws/operaciones.php?operacion=mp_search&username="+usss+"&session_key="+sessionKey+"&range=date_created&begin_date=NOW-1MONTH&end_date=NOW&status=approved&operation_type=regular_payment"
+                    var store = Ext.getStore('storeResumen');
+                    store.getProxy().setUrl(url);
+                    store.load();
+                    
+                    
+
+                    
+                }else{
+                    Ext.getCmp('id_lblMensajeLogin').setHtml("Usuario o Contraseña invalido");
+                }
+            }
+            
+            function callbackFracaso(){
+                 Ext.getCmp('id_lblMensajeLogin').setHtml("Error al validar el usuario");
+            }
+            
+            new ServiceManager().queueService(url,datos,callbackExito,callbackFracaso);
+        }
+        
+    }
+}
