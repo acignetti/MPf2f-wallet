@@ -8,6 +8,7 @@ var QrManager = function(){
 
 
     QrManager.prototype.startQr = function(callbackExito){
+        console.log("MPW: Start Qr");
     	if(callbackExito)
     		callbackExito("LecturaQR");
     }

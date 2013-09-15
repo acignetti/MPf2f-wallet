@@ -1,0 +1,13 @@
+{
+    "type": "jsresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "js6",
+        "url": "gpsManager"
+    },
+    "designerId": "0b414d30-926e-4ff1-be00-c61c91aa0069"
+}

@@ -13,25 +13,37 @@
  * Do NOT hand edit this file.
  */
 
-Ext.define('MPWallet.model.MyModel', {
+Ext.define('MyApp.model.MyModel', {
     extend: 'Ext.data.Model',
 
     config: {
         fields: [
             {
-                name: 'id'
+                name: 'deal_id'
             },
             {
-                name: 'titulo'
+                name: 'title'
             },
             {
-                name: 'precio'
+                name: 'description'
             },
             {
-                name: 'lugar'
+                name: 'price'
             },
             {
-                name: 'local'
+                name: 'date'
+            },
+            {
+                name: 'lat'
+            },
+            {
+                name: 'lon'
+            },
+            {
+                name: 'id_usuario'
+            },
+            {
+                name: 'dist'
             }
         ]
     }

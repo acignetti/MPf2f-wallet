@@ -1,0 +1,12 @@
+/*GPSManager.prototype.mostrarCordenadas = function(){
+    
+        navigator.geolocation.getCurrentPosition(geoExito, geoFalla,{
+            enableHighAccuracy: true
+        });
+        //Recupero Exitoso..................................................
+    
+        function geoExito(position) {
+            lat = position.coords.latitude;
+            lon = position.coords.longitude;
+        }
+}*/

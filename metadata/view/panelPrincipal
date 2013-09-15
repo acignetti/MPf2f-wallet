@@ -48,6 +48,8 @@
                     "userConfig": {
                         "height": 86,
                         "id": "img",
+                        "margin": "10 auto 0 0",
+                        "width": "50%",
                         "src": "app/resource/logo.png"
                     },
                     "designerId": "1290f98f-6d61-416e-ba49-9658c0c3ec9c"
@@ -60,7 +62,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "height": 448,
+                        "height": "100%",
                         "padding": "50 15 15 15",
                         "designer|displayName": "formLogin"
                     },
@@ -174,7 +176,12 @@
                                 "title": "Pagar",
                                 "centered": false,
                                 "height": "100%",
+                                "id": "id_panelPagar",
+                                "itemId": "mycontainer37",
                                 "designer|displayName": "panelPagar"
+                            },
+                            "configAlternates": {
+                                "masked": "boolean"
                             },
                             "designerId": "75ac03c6-c89c-4060-ba1d-bcf6a7b873c5",
                             "cn": [
@@ -188,58 +195,12 @@
                                     "userConfig": {
                                         "height": "100%",
                                         "padding": "50 0 0 0",
-                                        "designer|displayName": "formCodigos"
+                                        "designer|displayName": "formCodigos",
+                                        "hideOnMaskTap": false,
+                                        "masked": null
                                     },
                                     "designerId": "02bbbfbf-cf92-4de4-84d3-d57dd73869f9",
                                     "cn": [
-                                        {
-                                            "type": "Ext.Label",
-                                            "reference": {
-                                                "name": "items",
-                                                "type": "array"
-                                            },
-                                            "codeClass": null,
-                                            "userConfig": {
-                                                "html": "Ingresar Código",
-                                                "margin": "0 auto 0 auto",
-                                                "padding": "",
-                                                "width": 136,
-                                                "designer|displayName": "lblIngresarCodigo"
-                                            },
-                                            "designerId": "e340f8ee-1f65-4d2a-b272-9020aab90a42"
-                                        },
-                                        {
-                                            "type": "Ext.field.Text",
-                                            "reference": {
-                                                "name": "items",
-                                                "type": "array"
-                                            },
-                                            "codeClass": null,
-                                            "userConfig": {
-                                                "id": "textCodigo",
-                                                "margin": "10 20 0 20",
-                                                "designer|displayName": "textCodigo",
-                                                "label": ""
-                                            },
-                                            "designerId": "4cc32598-eda9-48df-9d2c-3038e4c162c7"
-                                        },
-                                        {
-                                            "type": "Ext.Button",
-                                            "reference": {
-                                                "name": "items",
-                                                "type": "array"
-                                            },
-                                            "codeClass": null,
-                                            "userConfig": {
-                                                "margin": "5% auto 0 auto",
-                                                "maxWidth": 150,
-                                                "ui": "action",
-                                                "width": 150,
-                                                "designer|displayName": "btnPagar",
-                                                "text": "Pagar"
-                                            },
-                                            "designerId": "895dc1aa-4bfc-46db-803d-104f83d6e8df"
-                                        },
                                         {
                                             "type": "Ext.SegmentedButton",
                                             "reference": {
@@ -299,7 +260,8 @@
                                                                 "fn": "onMybutton63Tap",
                                                                 "implHandler": [
                                                                     "new QrManager().startQr(function(lectura){\r",
-                                                                    "\tExt.getCmp('textCodigo').setText(lectura);\r",
+                                                                    "    Ext.getCmp('idEstadoPago').setHtml(\"Codigo de pago generado!\");\r",
+                                                                    "    var_pagoUrl = \"http://10.52.213.157/mp-ws/operaciones.php?operacion=mp_checkout&id=2\";\r",
                                                                     "});"
                                                                 ],
                                                                 "name": "tap"
@@ -309,38 +271,7 @@
                                                     ]
                                                 }
                                             ]
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "type": "Ext.Container",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "title": "Ofertas",
-                                "height": "100%",
-                                "designer|displayName": "panelOfertas"
-                            },
-                            "designerId": "880047c1-9e65-4570-86f8-fbe0cd119aa9",
-                            "cn": [
-                                {
-                                    "type": "Ext.Panel",
-                                    "reference": {
-                                        "name": "items",
-                                        "type": "array"
-                                    },
-                                    "codeClass": null,
-                                    "userConfig": {
-                                        "height": "100%",
-                                        "designer|displayName": "panelPrinOfertas"
-                                    },
-                                    "designerId": "a8dfd410-83a5-415d-a447-d710c3bfec22",
-                                    "cn": [
+                                        },
                                         {
                                             "type": "Ext.Label",
                                             "reference": {
@@ -349,29 +280,60 @@
                                             },
                                             "codeClass": null,
                                             "userConfig": {
-                                                "docked": "top",
-                                                "html": "Ofertas cerca tuyo!",
-                                                "designer|displayName": "lblOfertasCerca"
+                                                "html": "Estado del pago:",
+                                                "margin": "20 auto 0 auto",
+                                                "maxWidth": 160,
+                                                "minWidth": 160,
+                                                "padding": "",
+                                                "width": 160,
+                                                "designer|displayName": "lblIngresarCodigo"
                                             },
-                                            "designerId": "8ceb08c8-6efa-4bc6-b32c-949904946b27"
+                                            "designerId": "e340f8ee-1f65-4d2a-b272-9020aab90a42"
                                         },
                                         {
-                                            "type": "Ext.field.Search",
+                                            "type": "Ext.Label",
                                             "reference": {
                                                 "name": "items",
                                                 "type": "array"
                                             },
                                             "codeClass": null,
                                             "userConfig": {
-                                                "docked": "top",
-                                                "itemId": "mysearchfield2",
-                                                "margin": 10,
-                                                "width": "80%",
-                                                "label": "",
-                                                "labelAlign": "right",
-                                                "name": "field"
+                                                "estado": "sin_codigo",
+                                                "height": 73,
+                                                "html": "Lea NFC/Qr para generar el codigo de Pago",
+                                                "id": "idEstadoPago",
+                                                "margin": "20 auto 0 auto",
+                                                "maxWidth": 268,
+                                                "style": "color: grey;text-align: center;",
+                                                "ui": "",
+                                                "width": 268
                                             },
-                                            "designerId": "830f27a8-9be9-4ca0-87cf-0ed8506205d2",
+                                            "designerId": "4096df4b-e20b-4492-8cff-c256a2df28f8",
+                                            "customConfigs": [
+                                                {
+                                                    "group": "(Custom Properties)",
+                                                    "name": "estado",
+                                                    "type": "string"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "itemId": "mybutton61",
+                                                "margin": "5% auto 0 auto",
+                                                "maxWidth": 150,
+                                                "ui": "action",
+                                                "width": 150,
+                                                "designer|displayName": "btnPagar",
+                                                "text": "Pagar"
+                                            },
+                                            "designerId": "895dc1aa-4bfc-46db-803d-104f83d6e8df",
                                             "cn": [
                                                 {
                                                     "type": "basiceventbinding",
@@ -381,106 +343,18 @@
                                                     },
                                                     "codeClass": null,
                                                     "userConfig": {
-                                                        "fn": "onMysearchfield2Keyup",
+                                                        "fn": "onMybutton61Tap",
                                                         "implHandler": [
-                                                            "var filtro = textfield.getValue();\r",
-                                                            "var store = Ext.getStore(\"storeOfertas\");\r",
-                                                            "\r",
-                                                            "store.filter( 'firstName', filtro, true,false);\r",
-                                                            "store.load();"
+                                                            "if(var_pagoUrl){\r",
+                                                            "    //  Ext.getCmp(\"id_panelPagar\").setMasked(true);\r",
+                                                            "    new PagosManager().generarPago();\r",
+                                                            "}\r",
+                                                            "else\r",
+                                                            "alert(\"Debe leer un codigo de pago\");"
                                                         ],
-                                                        "name": "keyup"
+                                                        "name": "tap"
                                                     },
-                                                    "designerId": "6080d868-67ed-4de9-b01a-af7c4a21c61b"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "type": "Ext.Container",
-                                            "reference": {
-                                                "name": "items",
-                                                "type": "array"
-                                            },
-                                            "codeClass": null,
-                                            "userConfig": {
-                                                "docked": "bottom",
-                                                "height": "100%",
-                                                "ui": "dark",
-                                                "width": "100%",
-                                                "layout": "card"
-                                            },
-                                            "designerId": "f22fd7b0-e8d1-4874-a419-d24a1e03b52d",
-                                            "cn": [
-                                                {
-                                                    "type": "Ext.dataview.List",
-                                                    "reference": {
-                                                        "name": "items",
-                                                        "type": "array"
-                                                    },
-                                                    "codeClass": null,
-                                                    "userConfig": {
-                                                        "height": "85%",
-                                                        "id": "listOfertas",
-                                                        "itemId": "mylist2",
-                                                        "margin": "0 0 100 0 ",
-                                                        "ui": "round",
-                                                        "width": "100%",
-                                                        "designer|displayName": "listOfertas",
-                                                        "scrollable": [
-                                                            "true"
-                                                        ],
-                                                        "scrollToTopOnRefresh": false,
-                                                        "store": "storeOfertas"
-                                                    },
-                                                    "designerId": "6c2ded77-e751-4ce9-860a-fd8da996c5a8",
-                                                    "cn": [
-                                                        {
-                                                            "type": "Ext.XTemplate",
-                                                            "reference": {
-                                                                "name": "itemTpl",
-                                                                "type": "object"
-                                                            },
-                                                            "codeClass": null,
-                                                            "userConfig": {
-                                                                "implHandler": [
-                                                                    "<div class=\"contact\"><b>{titulo}<b><br>Precio: ${precio}<br> En {local} ({lugar})</div>"
-                                                                ],
-                                                                "designer|displayName": "itemTpl"
-                                                            },
-                                                            "designerId": "5a1e48dd-359c-4faa-9285-1fc1a95f174e"
-                                                        },
-                                                        {
-                                                            "type": "basiceventbinding",
-                                                            "reference": {
-                                                                "name": "listeners",
-                                                                "type": "array"
-                                                            },
-                                                            "codeClass": null,
-                                                            "userConfig": {
-                                                                "fn": "onMylist2ItemTap",
-                                                                "implHandler": [
-                                                                    "var evento = Ext.getCmp('panelPrincipal');\r",
-                                                                    "\r",
-                                                                    "\r",
-                                                                    "var titulo = Ext.getCmp(\"OD_labelTitulo\");\r",
-                                                                    "titulo.setHtml(record.get(\"titulo\"));\r",
-                                                                    "\r",
-                                                                    "var precio = Ext.getCmp(\"OD_labelPrecio\");\r",
-                                                                    "precio.setHtml(record.get(\"precio\"));\r",
-                                                                    "\r",
-                                                                    "var descArticulo = Ext.getCmp(\"OD_descripOferta\");\r",
-                                                                    "descArticulo.setHtml(record.get(\"id\") + \" Articulo Nuevo\");\r",
-                                                                    "\r",
-                                                                    "var pagos = Ext.getCmp(\"OD_pagos\");\r",
-                                                                    "pagos.setHtml(record.get(\"id\") + \" Pagos disponibles: Nevada, Mercado Pago\");\r",
-                                                                    "\r",
-                                                                    "evento.setActiveItem(2);"
-                                                                ],
-                                                                "name": "itemtap"
-                                                            },
-                                                            "designerId": "90b009ee-6ca3-4b63-84b6-dbbfc1480e89"
-                                                        }
-                                                    ]
+                                                    "designerId": "4088395a-3872-40f4-9f5c-d4b62fbd0464"
                                                 }
                                             ]
                                         }
@@ -509,27 +383,10 @@
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "height": 47,
-                                        "padding": "0 50 0 0"
+                                        "height": 47
                                     },
-                                    "designerId": "6fe089ab-696e-4b91-8b95-ecfb0c10e5f1",
+                                    "designerId": "abca478a-6bae-42dd-90d0-34bbdcfb7dbb",
                                     "cn": [
-                                        {
-                                            "type": "Ext.Img",
-                                            "reference": {
-                                                "name": "items",
-                                                "type": "array"
-                                            },
-                                            "codeClass": null,
-                                            "userConfig": {
-                                                "docked": "left",
-                                                "height": 50,
-                                                "ui": "",
-                                                "width": 60,
-                                                "src": "app/resource/searchIcon.png"
-                                            },
-                                            "designerId": "87a947e1-aaea-4e00-8cae-293e96bbf9c5"
-                                        },
                                         {
                                             "type": "Ext.field.Text",
                                             "reference": {
@@ -538,16 +395,24 @@
                                             },
                                             "codeClass": null,
                                             "userConfig": {
-                                                "docked": "left",
-                                                "height": 50,
-                                                "margin": 5,
-                                                "padding": "0 20 0 0",
-                                                "width": "80%",
-                                                "label": "",
-                                                "labelAlign": "right",
-                                                "name": "field"
+                                                "width": "100%",
+                                                "label": ""
                                             },
-                                            "designerId": "cf9f707e-a670-4290-a188-f390e10600eb"
+                                            "designerId": "3b6c72e4-adbc-498d-889b-56fd59d3a833"
+                                        },
+                                        {
+                                            "type": "Ext.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "docked": "right",
+                                                "width": "18%",
+                                                "text": "Buscar"
+                                            },
+                                            "designerId": "2a69a950-8b2b-4f48-b25a-de759aa5a918"
                                         }
                                     ]
                                 },
@@ -559,10 +424,10 @@
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "height": 377,
-                                        "width": "100%"
+                                        "height": "100%",
+                                        "store": "storeOfertas"
                                     },
-                                    "designerId": "73ba55f4-b41a-42c4-bfc8-087c121d4f1b",
+                                    "designerId": "1d932c31-d575-4b92-a7d4-47c48016b479",
                                     "cn": [
                                         {
                                             "type": "Ext.XTemplate",
@@ -573,11 +438,127 @@
                                             "codeClass": null,
                                             "userConfig": {
                                                 "implHandler": [
-                                                    "<div>List Item {string}</div>"
+                                                    "<div>List Item {title}</div>"
                                                 ],
                                                 "designer|displayName": "itemTpl"
                                             },
-                                            "designerId": "16b60bef-8891-42ba-af51-17bf5936efcf"
+                                            "designerId": "d1b0a696-f7a3-42aa-b3c3-8e157894d3b2"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "title": "Ofertas",
+                                "id": "panelOfertas"
+                            },
+                            "designerId": "8b92a357-f28f-4910-b1d1-a7d0afde9a4d",
+                            "cn": [
+                                {
+                                    "type": "Ext.field.Search",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "id": "PO_textBoxFiltro",
+                                        "itemId": "mysearchfield2",
+                                        "label": "Filtro",
+                                        "labelWidth": "20%"
+                                    },
+                                    "designerId": "759f9811-80d6-4d79-8c24-1ea55f29f896",
+                                    "cn": [
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onMysearchfield2Keyup",
+                                                "implHandler": [
+                                                    "\r",
+                                                    "var filtro = textfield.getValue();\r",
+                                                    "var store = Ext.getStore(\"storeOfertas\");\r",
+                                                    "\r",
+                                                    "store.filter( 'titulo', filtro, true,false);\r",
+                                                    "store.load();"
+                                                ],
+                                                "name": "keyup"
+                                            },
+                                            "designerId": "e41a64c4-61d4-4867-9697-cf8c134ba670"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.dataview.List",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "height": "100%",
+                                        "id": "listaOfertas",
+                                        "itemId": "mylist5",
+                                        "store": "storeOfertas"
+                                    },
+                                    "designerId": "8db964a1-c8f8-499a-b7d1-97078380b77f",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.XTemplate",
+                                            "reference": {
+                                                "name": "itemTpl",
+                                                "type": "object"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "implHandler": [
+                                                    "<div><b>{title}</b><br>Precio: <font color=\"red\"> ${price} </font> <br> Descripcion: {description}</div>"
+                                                ],
+                                                "designer|displayName": "itemTpl"
+                                            },
+                                            "designerId": "2d2d7f26-f234-402b-9604-53b4601f743d"
+                                        },
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onListaOfertasItemTap",
+                                                "implHandler": [
+                                                    "var evento = Ext.getCmp('panelPrincipal');\r",
+                                                    "\r",
+                                                    "\r",
+                                                    "var titulo = Ext.getCmp(\"OD_labelTitulo\");\r",
+                                                    "titulo.setHtml(record.get(\"title\"));\r",
+                                                    "\r",
+                                                    "var precio = Ext.getCmp(\"OD_labelPrecio\");\r",
+                                                    "precio.setHtml(record.get(\"price\"));\r",
+                                                    "\r",
+                                                    "var descArticulo = Ext.getCmp(\"OD_distancia\");\r",
+                                                    "descArticulo.setHtml(\"Distancia Aproximada: \" + record.get(\"dist\"));\r",
+                                                    "\r",
+                                                    "var pagos = Ext.getCmp(\"OD_fechaOferta\");\r",
+                                                    "pagos.setHtml(\"Fecha de la oferta: \" + record.get(\"date\") + \"Km\");\r",
+                                                    "\r",
+                                                    "evento.setActiveItem(2);"
+                                                ],
+                                                "name": "itemtap"
+                                            },
+                                            "designerId": "4a71ab90-ecec-4e90-ad9e-68b42e0504db"
                                         }
                                     ]
                                 }
@@ -639,7 +620,7 @@
                                         "fn": "onMybutton37Tap",
                                         "implHandler": [
                                             "Ext.getCmp(\"panelPrincipal\").setActiveItem(1);\r",
-                                            "Ext.getCmp(\"listOfertas\").deselectAll();"
+                                            "Ext.getCmp(\"listaOfertas\").deselectAll();"
                                         ],
                                         "name": "tap"
                                     },
@@ -698,6 +679,7 @@
                     "userConfig": {
                         "html": "Articulo nuevo",
                         "id": "OD_descArticulo",
+                        "style": "color:grey;",
                         "designer|displayName": "OD_descArticulo"
                     },
                     "designerId": "2b70457b-fa7b-44c6-a2be-de143f68b969"
@@ -722,10 +704,11 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "html": "12 Cuotas de 12.44",
-                        "id": "OD_descripOferta"
+                        "html": "Medios de Pagos: Targeta Verde, Nevada, Mercado Pago, verde, lalal ., esta",
+                        "id": "OD_fechaOferta",
+                        "width": ""
                     },
-                    "designerId": "1cd24825-1044-4d47-b4db-75bcef1a68b8"
+                    "designerId": "eb5f14d0-1a68-4ad8-b9cd-73a49e5e8496"
                 },
                 {
                     "type": "Ext.Label",
@@ -735,28 +718,10 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "html": "Medios de Pagos: Targeta Verde, Nevada, Mercado Pago, verde, lalal ., esta",
-                        "id": "OD_pagos",
-                        "width": ""
+                        "html": "Distancia:",
+                        "id": "OD_distancia"
                     },
-                    "designerId": "eb5f14d0-1a68-4ad8-b9cd-73a49e5e8496"
-                },
-                {
-                    "type": "Ext.Img",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "height": 201,
-                        "id": "OD_img",
-                        "margin": "20 auto 0 auto",
-                        "maxWidth": 300,
-                        "minWidth": 300,
-                        "src": "app/resource/searchIcon.png"
-                    },
-                    "designerId": "e6c49a26-3c4c-485a-8096-e0f9142ae108"
+                    "designerId": "78fcfb1b-f1f5-4a58-ba23-7a5df187979b"
                 },
                 {
                     "type": "Ext.SegmentedButton",

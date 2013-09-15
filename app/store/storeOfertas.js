@@ -13,66 +13,24 @@
  * Do NOT hand edit this file.
  */
 
-Ext.define('MPWallet.store.storeOfertas', {
+Ext.define('MyApp.store.storeOfertas', {
     extend: 'Ext.data.Store',
 
     requires: [
-        'MPWallet.model.MyModel'
+        'MyApp.model.MyModel'
     ],
 
     config: {
-        data: [
-            {
-                id: 1,
-                titulo: 'Speed',
-                precio: '10.00',
-                lugar: 'Vm',
-                local: 'Garbarino'
-            },
-            {
-                id: 2,
-                titulo: 'Speed1',
-                precio: '11.00',
-                lugar: 'Vm1',
-                local: 'Garbarino1'
-            },
-            {
-                id: 3,
-                titulo: 'Speed2',
-                precio: '12.00',
-                lugar: 'Vm2',
-                local: 'Garbarino2'
-            },
-            {
-                id: 4,
-                titulo: 'Speed3',
-                precio: '13.00',
-                lugar: 'Vm3',
-                local: 'Garbarino3'
-            },
-            {
-                id: 5,
-                titulo: 'Speed4',
-                precio: '14.00',
-                lugar: 'Vm4',
-                local: 'Garbarino4'
-            },
-            {
-                id: 6,
-                titulo: 'Speed5',
-                precio: '15.00',
-                lugar: 'Vm5',
-                local: 'Garbarino5'
-            },
-            {
-                id: 7,
-                titulo: 'Speed6',
-                precio: '16.00',
-                lugar: 'Vm6',
-                local: 'Garbarino6'
+        autoLoad: true,
+        model: 'MyApp.model.MyModel',
+        storeId: 'storeOfertas',
+        proxy: {
+            type: 'ajax',
+            url: 'http://10.52.213.157/mp-ws/operaciones.php?operacion=sales_deals&lat=-33.27802477887706&lon=-66.31584810472997&range=50',
+            reader: {
+                type: 'json',
+                rootProperty: 'deals'
             }
-        ],
-        model: 'MPWallet.model.MyModel',
-        storeId: 'storeOfertas'
+        }
     }
 });
